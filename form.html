@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Form</title>
+  </head>
+  <body>
+    <form method="post" action="panggil.html">
+      Nama Depan :<br />
+      <input
+        type="text"
+        placeholder="Ketik nama anda"
+        value="Budi"
+        name="namadepan"
+      />
+      <br />
+      <input
+        type="text"
+        placeholder="Ketik nama anda"
+        value="Budi"
+        name="namabelakang"
+        maxlength="15"
+      />
+      <br />
+      Jenis Kelamin:
+      <input type="radio" name="gender" value="L" checked /> Laki-laki
+      <input type="radio" name="gender" value="P" /> Perempuan
+      <br />
+      <input type="submit" value="Kirim" />
+      <input type="Reset" value="Batal" />
+      <input type="email" />
+      <button type="button">Submit</button>
+    </form>
+  </body>
+</html>
