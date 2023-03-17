@@ -1,0 +1,28 @@
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.card:hover {
+  background-color: lime;
+  color: black;
+}
+.fakeImage {
+  background-color: dimgray;
+  width: 100%;
+  margin-top: 20px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
