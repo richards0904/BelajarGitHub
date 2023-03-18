@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>Belajar Bootstrap</title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container bg-primary">
+      <div class="container-fluid">
+        <h1>Belajar Menggunakan Framework Bootstrap</h1>
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="row bg-primary">
+        <div class="col border">Kolom 1</div>
+        <div class="col border">Kolom 2</div>
+        <div class="col border">Kolom 3</div>
+        <div class="col border">Kolom 4</div>
+      </div>
+      <div class="container text-center">
+        <!-- Normal -->
+        <div class="row bg-danger">
+          <div class="col border">col</div>
+          <div class="col border">col</div>
+          <div class="col border">col</div>
+          <div class="col border">col</div>
+        </div>
+        <!-- All Breakpoints -->
+        <div class="row bg-success">
+          <div class="col-8 border">col-8</div>
+          <div class="col-4 border">col-4</div>
+          <!-- Apabila lebih dari 12 dalam satu abris akan menuju kebawah -->
+          <div class="col-4 border bg-warning">col-4</div>
+        </div>
+      </div>
+      <!-- Stacked to horizontal -->
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-8 border">col-sm-8</div>
+          <div class="col-sm-4 border">col-sm-4</div>
+        </div>
+        <div class="row">
+          <div class="col-sm border">col-sm</div>
+          <div class="col-sm border">col-sm</div>
+          <div class="col-sm border">col-sm</div>
+        </div>
+      </div>
+      <!-- Mix and Match -->
+      <div class="container text-center">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+          <div class="col-md-8 border">.col-md-8</div>
+          <div class="col-6 col-md-4 border">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+          <div class="col-6 col-md-4 border">.col-6 .col-md-4</div>
+          <div class="col-6 col-md-4 border">.col-6 .col-md-4</div>
+          <div class="col-6 col-md-4 border">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <div class="row bg-danger-subtle">
+          <div class="col-6 col-md-3 col-lg-11 border">.col-6</div>
+          <div class="col-sm col-md-9 col-lg-1 border">.col-6</div>
+          <!-- col-sm disini buat smartphone lebarnya -->
+          <!-- col-md dibuat untuk ukuran tablet -->
+          <!-- col-lg dibuat untuk ukuiran dekstop -->
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
