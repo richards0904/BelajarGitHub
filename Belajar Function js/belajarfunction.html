@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Function</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+      function tampilPesan() {
+        return "Universitas MDP";
+      }
+      function kali(bil1, bil2) {
+        return bil1 * bil2;
+      }
+      function pesan1() {
+        alert("Pesan Hello World");
+      }
+      function pesan2(nama) {
+        alert("Selamat Datang " + nama);
+      }
+      function pesan3() {
+        let nilai = prompt("Silahakan Masukan nilai");
+        alert("Nilai yang anda masukan adalah " + nilai);
+      }
+      function myFunction() {
+        let text = "Press a button!\nEither OK or Cancel.";
+        if (confirm(text) == true) {
+          text = "You pressed OK!";
+        } else {
+          text = "You canceled!";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </head>
+  <body onload="pesan1()">
+    <form method="post">
+      <input type="button" value="Panggil Pesan 1" onclick="pesan1()" />
+      <input
+        type="button"
+        value="Panggil Pesan 2"
+        onclick="pesan2('Richard')"
+      />
+      <input type="button" value="Panggil Pesan 3" onclick="pesan3()" />
+      <input type="button" value="Klik saya" onclick="myFunction()" />
+    </form>
+    <p id="Kalimat">Pemrograman Web</p>
+    <button
+      onclick="document.getElementById('Kalimat').innerHTML='Hello Javascript'"
+    >
+      Ganti Tulisan
+    </button>
+    <button onclick="document.getElementById('Kalimat').style.fontSize='40px'">
+      Ganti FontSize
+    </button>
+    <button onclick="document.getElementById('Kalimat').style.display='none'">
+      Hide
+    </button>
+    <button onclick="document.getElementById('Kalimat').style.display='block'">
+      Visible
+    </button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      document.write(tampilPesan() + "<br>");
+      document.write(kali(10, 9));
+    </script>
+  </body>
+</html>
