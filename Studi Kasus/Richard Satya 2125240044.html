@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+        form{
+            width: 50%;
+            margin:10px;
+            
+        }
+    </style>
+    <title>Studi Kasus</title>
+</head>
+<body>
+    <form>
+    Nama: <input class="form-control" type="text" id="nama">
+    <br>
+    Biaya Jasa: <input class="form-control" type="number" id="jasa">
+    <br>
+    Biaya Sparepart: <input class="form-control" type="number" id="sparepart">
+    <br>
+    Kode Member: <select class="form-control" id="kode">
+        <option value="B">B</option>
+        <option value="M">M</option>
+        <option value="N">N</option>
+    </select>
+    <br><br>
+    <button id="hitung" onclick="tampil()">Hitung Data</button>
+    <br>
+    <p id="tampil">Output</p>
+    </form>
+    <script type="text/javascript">
+        function tampil(){
+            let nama = document.getElementById("nama").value;
+            let jasa = parseInt(document.getElementById("jasa").value);
+            let sparepart = parseInt(document.getElementById("sparepart").value);
+            let kode = document.getElementById("kode").value;
+            let diskon;
+            if (kode.toUpperCase() == "B") {
+                diskon = 0.25;
+            } else if (kode.toUpperCase() == "M") {
+                diskon = 0.2;
+            } else {
+                diskon = 0.1;
+            }
+            let subTotal = jasa + sparepart
+            let nilaiDiskon = subTotal * diskon;
+            let nilaiDPP = subTotal - nilaiDiskon;
+            let ppn = 0.1 * nilaiDPP;
+            let grandtotal = nilaiDPP + ppn;
+            document.getElementById("tampil").innerHTML="Nama = " + nama +"<br>" + 
+            "Kode Member = " + kode.toUpperCase() + "<br>" + 
+            "Biaya Jasa = " + "Rp."+jasa + "<br>" + 
+            "Biaya Sparepart = "+ "Rp." +sparepart + "<br>" + 
+            "Jumlah = " +"Rp." + subTotal + "<br>" + 
+            "Diskon = " +"Rp."+ nilaiDiskon + "<br>" + 
+            "DPP = " + "Rp."+ nilaiDPP + "<br>" + 
+            "PPN = " +"Rp." + ppn + "<br>" + 
+            "Total Akhir = " +"Rp." + grandtotal;
+            ;
+        }
+        </script>
+</body>
+</html>
